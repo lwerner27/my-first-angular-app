@@ -1,0 +1,14 @@
+<button class="btn btn-primary text-uppercase" (click)="toggleDetails()">
+    {{ buttonText }}
+</button>
+<br>
+<br>
+<p *ngIf="displayText">
+    Password: password1234
+</p>
+<p 
+    *ngFor="let buttonClick of buttonClicks" 
+    [ngStyle]="{backgroundColor: buttonClick > 4 ? 'blue' : 'transparent'}" 
+    [ngClass]="{white: buttonClick > 4}">
+    Button has been clicked
+</p>
